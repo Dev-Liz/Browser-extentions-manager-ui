@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: hsl(0, 0%, 78%);
+  --card-bg: hsl(200, 60%, 99%);
+  --card-border: hsl(0, 0%, 93%);
+  --badge-bg: hsl(200, 60%, 99%);
+  --badge-border: hsl(217, 61%, 90%);
+  --badge-hover-bg: hsl(200, 60%, 99%);
+  --badge-hover-text: hsl(0, 0%, 78%);
+  --badge-active-bg: hsl(3, 77%, 44%);
+  --badge-active-text: hsl(200, 60%, 99%);
+  --badge-active-hover: hsl(3, 71%, 56%);
+  --badge-secondary-hover: hsl(3, 77%, 44%);
+  --radio-neutral-bg: hsl(0, 0%, 78%);
+  --radio-foreground: hsl(200, 60%, 99%);
+  --theme-switch: hsl(0, 0%, 93%);
+  --theme-switch-hover: hsl(0, 0%, 78%);
+  --theme-switch-focus: hsl(3, 86%, 64%);
+
+  --text-100: hsl(0, 0%, 78%);
+  --text-200: hsl(226, 25%, 17%);
+
+  --radio-red: hsl(3, 77%, 44%);
+  --tab-red: hsl(3, 77%, 44%);
+  --logo-red: hsl(3, 77%, 44%);
+
+  --gradient-1: #ebf2fc;
+  --gradient-2: #eefbf9;
+
+  --shadow-sm: 0px 2px 3px 0px hsl(213 55% 90%);
+  --shadow:
+    0px 2px 2px 0px hsl(217 34% 82% / 0.2),
+    0px 1px 5px 1px hsl(217 34% 82% / 0.22);
+
+  --font-family: "Noto Sans", sans-serif;
+}
+
+.dark {
+  --background: hsl(227, 75%, 14%);
+  --card-bg: hsl(226, 25%, 17%);
+  --card-border: hsl(226, 11%, 37%);
+  --badge-bg: hsl(225, 23%, 24%);
+  --badge-border: hsl(226, 11%, 37%);
+  --badge-hover-bg: hsl(226, 11%, 37%);
+  --badge-hover-text: hsl(200, 60%, 99%);
+  --badge-active-bg: hsl(3, 86%, 64%);
+  --badge-active-text: hsl(226, 25%, 17%);
+  --badge-active-hover: hsl(3, 77%, 44%);
+  --badge-secondary-hover: hsl(3, 86%, 64%);
+  --radio-neutral-bg: hsl(226, 11%, 37%);
+  --radio-foreground: hsl(200, 60%, 99%);
+  --theme-switch: hsl(225, 23%, 24%);
+  --theme-switch-hover: hsl(226, 11%, 37%);
+  --theme-switch-focus: hsl(3, 86%, 64%);
+
+  --text-100: hsl(0, 0%, 78%);
+  --text-200: hsl(200, 60%, 99%);
+
+  --radio-red: hsl(3, 86%, 64%);
+  --tab-red: hsl(3, 86%, 64%);
+  --logo-red: hsl(3, 86%, 64%);
+
+  --gradient-1: #040918;
+  --gradient-2: #091540;
+
+  --shadow-sm: 0px 2px 3px 0px hsl(226 24% 17%/0.164);
+  --shadow:
+    0px 2px 2px 0px hsl(226 25% 17%/0.2),
+    0px 1px 5px 1px hsl(226 25% 17% / 0.22);
+
+  --font-family: "Noto Sans", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-badge-bg: var(--badge-bg);
+  --color-badge-border: var(--badge-border);
+  --color-badge-hover-bg: var(--badge-hover-bg);
+  --color-badge-hover-text: var(--badge-hover-text);
+  --color-badge-active-bg: var(--badge-active-bg);
+  --color-badge-active-text: var(--badge-active-text);
+  --color-badge-active-hover: var(--badge-active-hover);
+  --color-badge-secondary-hover: var(--badge-secondary-hover);
+  --color-radio-off-bg: var(--radio-neutral-bg);
+  --color-radio-ring: var(--radio-foreground);
+  --color-theme-switch: var(--theme-switch);
+  --color-theme-switch-hover: var(--theme-switch-hover);
+  --color-theme-switch-focus: var(--theme-switch-focus);
+
+  --color-text-100: var(--text-100);
+  --color-text-200: var(--text-200);
+
+  --color-radio-red: var(--radio-red);
+  --color-tab-red: var(--tab-red);
+  --color-logo-red: var(--logo-red);
+
+  --color-gradient-1: var(--gradient-1);
+  --color-gradient-2: var(--gradient-2);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+
+  --font-noto: var(--font-family);
+}
+
+@layer base {
+  * {
+    @apply p-0 m-0;
+  }
+
+  body {
+    @apply w-full h-full bg-linear-to-br from-gradient-1 from-0% to-gradient-2 to-100% font-noto py-6 transition-colors ease-in-out duration-50;
+  }
+
+  h1 {
+    @apply text-text-200 font-bold text-4xl;
+  }
+
+  h2 {
+    @apply text-text-200 font-bold text-2xl;
+  }
+}
+
+@layer components {
+  .header {
+    @apply w-full p-4 flex justify-between items-center bg-card-bg shadow-sm rounded-[20px];
+  }
+
+  .theme {
+    @apply bg-theme-switch rounded-xl p-4 hover:bg-theme-switch-hover focus:border focus:border-theme-switch-focus;
+  }
+
+  .card {
+    @apply bg-card-bg py-4 px-8 flex flex-col space-y-4 border border-card-border rounded-[20px];
+
+    p {
+      @apply text-text-100 text-[16px];
+    }
+  }
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant default {
+    max-width: 360px;
+  }
+  @variant sm {
+    max-width: 540px;
+  }
+  @variant md {
+    max-width: 720px;
+  }
+  @variant lg {
+    max-width: 960px;
+  }
+  @variant xl {
+    max-width: 1140px;
+  }
+}
+
+@utility container-flex {
+  @apply flex flex-col items-center justify-center space-y-14;
+}
+
+@utility card-main {
+  @apply w-full flex flex-col space-y-10;
+}
+
+@utility cards-header {
+  @apply w-full flex flex-col items-center justify-center space-y-2 md:flex-row md:justify-between;
+}
+
+@utility badges-flex {
+  @apply w-full flex justify-between items-center md:w-fit;
+}
+
+@utility toggle-label {
+  @apply relative flex items-center cursor-pointer select-auto;
+}
+
+@utility toggle-bg {
+  @apply w-10 h-5 bg-radio-off-bg rounded-full transition-all duration-200 ease-in-out;
+}
+
+@utility toggle-ring {
+  @apply w-2/5 h-4/5 bg-radio-ring absolute rounded-full left-1 top-0.5 peer-checked:left-5 transition-all duration-500;
+}
+
+@utility toggle-ring-active {
+  @apply left-5;
+}
+
+@utility toggle-bg-active {
+  @apply bg-radio-red;
+}
+
+@utility card-group {
+  @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3;
+}
+
+@utility flex-vertical {
+  @apply flex flex-col space-y-2;
+}
+
+@utility card-top {
+  @apply flex flex-1 items-start space-x-4;
+}
+
+@utility card-bottom {
+  @apply flex items-center justify-between;
+}

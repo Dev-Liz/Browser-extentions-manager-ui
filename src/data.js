@@ -5,7 +5,7 @@ export const data = [
     name: "DevLens",
     description:
       "Quickly inspect page layouts and visualize element boundaries.",
-    isActive: true,
+    isActive: false,
   },
   {
     id: 2,

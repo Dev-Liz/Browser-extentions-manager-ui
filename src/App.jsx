@@ -1,5 +1,4 @@
-import CardGroup from "./components/CardGroup";
-import CardsHeader from "./components/CardsHeader";
+import Extensions from "./components/Extensions";
 import Header from "./components/Header";
 import "./index.css";
 
@@ -8,10 +7,7 @@ export default function App() {
     <div className="container">
       <div className="container-flex">
         <Header />
-        <main className="card-main">
-          <CardsHeader />
-          <CardGroup />
-        </main>
+        <Extensions />
       </div>
     </div>
   );

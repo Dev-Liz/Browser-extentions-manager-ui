@@ -2,11 +2,11 @@ import React from "react";
 import Badges from "./Badges";
 import ToggleSwitch from "./ToggleSwitch";
 
-export default function CardsHeader() {
+export default function CardsHeader({ filter, setFilter }) {
   return (
     <header className="cards-header">
       <h1>Extentions List</h1>
-      <Badges />
+      <Badges filter={filter} setFilter={setFilter} />
     </header>
   );
 }

@@ -1,27 +1,19 @@
 import React from "react";
 import Badge from "./Badge";
+import { cn } from "../../lib/utils";
 
-export default function Badges() {
-  const texts = [
-    {
-      name: "All",
-      variant: "active",
-    },
-    {
-      name: "Active",
-      variant: "",
-    },
-    {
-      name: "Inactive",
-      variant: "",
-    },
-  ];
+export default function Badges({ filter, setFilter }) {
+  const badgeStatus = ["All", "Active", "Inactive"];
 
   return (
     <div classname="badges-flex">
-      {texts.map((text) => (
-        <Badge key={text.name} variant={text.variant}>
-          {text.name}
+      {badgeStatus.map((status) => (
+        <Badge
+          key={status}
+          onClick={() => setFilter(status)}
+          variant={filter === status ? "active" : "default"}
+        >
+          {status}
         </Badge>
       ))}
     </div>

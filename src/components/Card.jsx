@@ -9,7 +9,7 @@ export default function Card({
   isActive,
   card,
   onToggle,
-  onDelete,
+  onDeleteRequest,
 }) {
   const [isOn, setIsOn] = useState(isActive);
 
@@ -27,7 +27,7 @@ export default function Card({
         </div>
       </div>
       <div className="card-bottom">
-        <Badge variant="secondary" onClick={() => onDelete(card.id)}>
+        <Badge variant="secondary" onClick={() => onDeleteRequest(card.id)}>
           Remove
         </Badge>
         <ToggleSwitch isToggled={isOn} onToggle={onToggle} card={card} />

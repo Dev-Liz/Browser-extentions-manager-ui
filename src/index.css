@@ -208,6 +208,26 @@
   @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 h-[70vh] overflow-y-auto scrollbar-none;
 }
 
+.modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4;
+}
+
+.modal {
+  @apply w-full max-w-md rounded-[24px] border border-card-border bg-card-bg p-6 shadow;
+}
+
+.modal h3 {
+  @apply text-text-200 text-xl font-bold mb-3;
+}
+
+.modal p {
+  @apply text-text-100 mb-6;
+}
+
+.modal-actions {
+  @apply flex justify-end gap-3;
+}
+
 @utility flex-vertical {
   @apply flex flex-col space-y-2;
 }

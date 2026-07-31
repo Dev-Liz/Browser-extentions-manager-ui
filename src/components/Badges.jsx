@@ -6,7 +6,7 @@ export default function Badges({ filter, setFilter }) {
   const badgeStatus = ["All", "Active", "Inactive"];
 
   return (
-    <div classname="badges-flex">
+    <div className="badges-flex">
       {badgeStatus.map((status) => (
         <Badge
           key={status}

@@ -20,8 +20,11 @@ export default function Badge({
 
   const chosenVariant = variants[variant] || variants.default;
   return (
-    <span className={`${baseStyles} ${chosenVariant} ${className}`} {...props}>
+    <button
+      className={`${baseStyles} ${chosenVariant} ${className}`}
+      {...props}
+    >
       {children}
-    </span>
+    </button>
   );
 }

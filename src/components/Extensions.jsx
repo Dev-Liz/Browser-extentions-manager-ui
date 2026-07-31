@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { data } from "../data";
+import data from "../data.json";
 import CardGroup from "./CardGroup";
 import CardsHeader from "./CardsHeader";
 

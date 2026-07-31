@@ -27,9 +27,9 @@ export default function Header() {
       <Logo />
       <button onClick={toggleTheme} className="theme">
         {theme === "light" ? (
-          <img src={moonIcon} alt="moon-icon" />
+          <img src={moonIcon} alt="theme-moon-icon" />
         ) : (
-          <img src={sunIcon} alt="moon-icon" />
+          <img src={sunIcon} alt="theme-sun-icon" />
         )}
       </button>
     </header>

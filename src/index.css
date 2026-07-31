@@ -177,7 +177,7 @@
 }
 
 @utility cards-header {
-  @apply w-full flex flex-col items-center justify-center space-y-2 md:flex-row md:justify-between;
+  @apply w-full flex flex-col items-center justify-center space-y-4 md:flex-row md:justify-between md:space-y-0;
 }
 
 @utility badges-flex {

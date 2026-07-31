@@ -210,14 +210,39 @@
 
 .modal-overlay {
   @apply fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4;
+  opacity: 0;
+  animation: fadeOverlay 200ms ease-out forwards;
 }
 
 .modal {
   @apply w-full max-w-md rounded-[24px] border border-card-border bg-card-bg p-6 shadow;
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  animation: fadeModal 220ms ease-out forwards;
 }
 
 .modal h3 {
   @apply text-text-200 text-xl font-bold mb-3;
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeModal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .modal p {

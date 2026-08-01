@@ -172,7 +172,7 @@
 }
 
 @utility card-main {
-  @apply w-full flex flex-col space-y-10 h-[80vh];
+  @apply w-full flex flex-col space-y-10;
 }
 
 @utility cards-header {
@@ -180,7 +180,7 @@
 }
 
 @utility badges-flex {
-  @apply w-[50%] flex items-center justify-center space-x-3 md:justify-end;
+  @apply flex items-center justify-center space-x-3 md:justify-end;
 }
 
 @utility toggle-label {
@@ -204,7 +204,7 @@
 }
 
 @utility card-group {
-  @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 h-[70vh] overflow-y-auto scrollbar-none;
+  @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 overflow-y-auto scrollbar-none;
 }
 
 .modal-overlay {

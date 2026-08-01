@@ -11,12 +11,6 @@ export default function Card({
   onToggle,
   onDeleteRequest,
 }) {
-  const [isOn, setIsOn] = useState(isActive);
-
-  const handleToggle = () => {
-    setIsOn((prev) => !prev);
-  };
-
   return (
     <div className="card">
       <div className="card-top">
@@ -30,7 +24,12 @@ export default function Card({
         <Badge variant="secondary" onClick={() => onDeleteRequest(card.id)}>
           Remove
         </Badge>
-        <ToggleSwitch isToggled={isOn} onToggle={onToggle} card={card} />
+        <ToggleSwitch
+          id={card.id}
+          name={name}
+          checked={isActive}
+          onToggle={onToggle}
+        />
       </div>
     </div>
   );

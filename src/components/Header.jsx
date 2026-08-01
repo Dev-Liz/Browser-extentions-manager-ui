@@ -24,8 +24,8 @@ export default function Header() {
 
   return (
     <header className="header">
-      <Logo />
-      <button onClick={toggleTheme} className="theme">
+      <Logo alt="extensions-logo" />
+      <button onClick={toggleTheme} className="theme" aria-label="toggle theme">
         {theme === "light" ? (
           <img src={moonIcon} alt="theme-moon-icon" />
         ) : (

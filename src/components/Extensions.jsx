@@ -30,8 +30,6 @@ export default function Extensions() {
       <CardsHeader filter={filter} setFilter={setFilter} />
       <CardGroup
         filteredCards={filteredCards}
-        cards={cards}
-        setCards={setCards}
         handleToggle={handleToggle}
         handleDelete={handleDelete}
       />

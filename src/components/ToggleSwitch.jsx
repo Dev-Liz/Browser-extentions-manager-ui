@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 
 export default function ToggleSwitch({ id, name, checked, onToggle }) {
   const inputId = `extension-${id}`;

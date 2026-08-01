@@ -11,7 +11,7 @@ export default function Badge({
 
   const variants = {
     default:
-      "bg-badge-bg border border-badge-border text-text-200 text-xl hover:bg-badge-hover-bg hover:badge-hover-text focus:border focus:border-theme-switch-focus",
+      "bg-badge-bg border border-badge-border text-text-200 text-xl hover:bg-badge-hover-bg hover:text-badge-hover-text focus:border focus:border-theme-switch-focus",
     active:
       "bg-badge-active-bg text-badge-active-text text-xl hover:bg-badge-active-hover focus:border focus:border-theme-switch-focus",
     secondary:

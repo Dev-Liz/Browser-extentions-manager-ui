@@ -1,6 +1,6 @@
 import React from "react";
 import Badge from "./Badge";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 
 export default function Badges({ filter, setFilter }) {
   const badgeStatus = ["All", "Active", "Inactive"];
